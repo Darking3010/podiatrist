@@ -762,7 +762,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-about,
 .fh5co-team,
 .fh5co-contact {
-  padding: 7em 0;
+  padding: 3em 0;
 }
 @media screen and (max-width: 768px) {
   .fh5co-about,
@@ -1135,7 +1135,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-pricing-section {
-  padding: 7em 0;
+  padding: 3em 0;
   background: #fcfcfc;
 }
 @media screen and (max-width: 768px) {
