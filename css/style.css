@@ -527,6 +527,10 @@ h1, h2, h3, h4, h5, h6, figure {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
     font-size: 50px;
   }
+
+  .slider-text-inner h2 {
+    margin-left: 120px;
+  }
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .fh5co-lead {
   font-size: 20px;
