@@ -1409,3 +1409,16 @@ details p {
   margin: 0 0 1rem;
   padding-top: 1rem;
 }
+
+.blah {
+  height: 500px;
+  width: 700px;
+}
+
+@media screen and (max-width: 768px) {
+  .blah {
+    margin-left: 0px;
+    height: 500px;
+    width: 400px;
+  }
+}
