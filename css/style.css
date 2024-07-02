@@ -1410,15 +1410,15 @@ details p {
   padding-top: 1rem;
 }
 
-.blah {
+.maps {
   height: 500px;
   width: 700px;
 }
 
-@media screen and (max-width: 768px) {
-  .blah {
+@media screen and (max-width: 900px) {
+  .maps {
     margin-left: 0px;
-    height: 500px;
-    width: 400px;
+    height: 400px;
+    width: 380px;
   }
 }
