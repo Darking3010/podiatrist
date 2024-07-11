@@ -1422,3 +1422,9 @@ details p {
     width: 380px;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .blah1 {
+    margin-left: 27%;
+  }
+}
