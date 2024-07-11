@@ -128,6 +128,34 @@
 	</div>
 
 	<!-- Features -->
+	<style>
+		.service {
+			background-size: cover;
+			background-position: center;
+			padding: 20px;
+			color: white;
+			margin-bottom: 20px;
+		}
+	
+		.desc {
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 20px;
+			border-radius: 5px;
+		}
+	
+		.desc p {
+			display: none;
+		}
+	
+		button {
+			border-radius: 10px;
+			border: none;
+			background-color: #27E1CE;
+			color: white;
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+	</style>
 	<div id="fh5co-services-section">
 		<div class="container">
 			<div class="row">
@@ -138,56 +166,131 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-laptop"></i>
-						<div class="desc">
-							<h3>Gait Analysis & Biomechanics</h3>
-							<p>Understanding how you move is crucial for diagnosing and treating foot issues. Our gait analysis examines walking patterns to identify abnormalities, tailoring treatments to improve your mobility and comfort.</p>
+					<style>
+						.services1 {
+							background-image: url('images/Gait analysis and biomechanics1.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 10px;
+						}
+					</style>
+					<div class="services services1">
+						<!-- <i class="icon-laptop"></i> -->
+						<div class="desc desc1">
+							<h3 style="color: white;">Gait Analysis & Biomechanics</h3>
+							<button onclick="toggleParagraph('desc1')">Learn More</button>
+							<p>Understanding how you move is crucial for treating foot issues. Our gait analysis examines walking
+								patterns to identify abnormalities, tailoring treatments to improve your mobility.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-server"></i>
-						<div class="desc">
-							<h3>Routine Nail and Skin Care</h3>
-							<p>Maintaining healthy nails and skin is essential for overall foot health. Our routine care includes nail trimming, fungal infection treatments, callus removal, and moisturizing to keep your feet in top condition.</p>
+					<style>
+						.services2 {
+							background-image: url('images/Custo\ orthotics.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 10px;
+						}
+					</style>
+					<div class="services services2">
+						<!-- <i class="icon-server"></i> -->
+						<div class="desc desc2">
+							<h3 style="color: white;">Routine Nail and Skin Care</h3>
+							<button onclick="toggleParagraph('desc2')">Learn More</button>
+							<p>Maintaining healthy nails and skin is essential for overall foot health. Our routine care includes nail
+								trimming, fungal infection treatments and moisturizing to keep your feet in top condition.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-money"></i>
-						<div class="desc">
-							<h3>Sports Injury Management</h3>
-							<p>Sports activities can lead to foot injuries affecting the back, knee, and hip. We provide targeted treatments to manage and rehabilitate these injuries, ensuring a quick and safe return to your active lifestyle.</p>
+					<style>
+						.services4 {
+							background-image: url('images/Sports\ injury.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 10px;
+						}
+					</style>
+					<div class="services services4">
+						<!-- <i class="icon-tablet"></i> -->
+						<div class="desc desc4">
+							<h3 style="color: white;">Sports Injury Management</h3>
+							<button onclick="toggleParagraph('desc4')">Learn More</button>
+							<p>Sports activities can lead to foot injuries affecting the back, knee, and hip. We provide targeted
+								treatments to manage and rehabilitate these injuries, ensuring a quick and safe return to your active
+								lifestyle.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-money"></i>
-						<div class="desc">
-							<h3>Children’s Foot Care</h3>
-							<p>Children's feet have unique needs as they grow. Our pediatric podiatry services focus on early detection and treatment of foot issues, ensuring healthy development. We provide care for flat feet, pigeon toes, and other common pediatric conditions.</p>
+					<style>
+						.services5 {
+							background-image: url('images/Sports\ injury.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 20px;
+						}
+					</style>
+					<div class="services services5">
+						<!-- <i class="icon-line-chart"></i> -->
+						<div class="desc desc5">
+							<h3 style="color: white;">Children's Foot Care</h3>
+							<button onclick="toggleParagraph('desc5')">Learn More</button>
+							<p>Children's feet have unique needs as they grow. Our pediatric podiatry services focus on early detection
+								and treatment of foot issues, ensuring healthy development. We provide care for flat feet, pigeon toes,
+								and other common pediatric conditions.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-money"></i>
-						<div class="desc">
-							<h3>Shockwave Therapy</h3>
-							<p>Shockwave therapy is an advanced treatment using high-energy sound waves to stimulate healing in tissues affected by chronic pain and injuries. It provides relief for conditions such as plantar fasciitis, tendonitis, and other musculoskeletal issues.</p>
+					<style>
+						.services3 {
+							background-image: url('images/diabetic\ footcare.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 20px;
+						}
+					</style>
+					<div class="services services3">
+						<!-- <i class="icon-money"></i> -->
+						<div class="desc desc3">
+							<h3 style="color: white;">Diabetic Foot Care</h3>
+							<button onclick="toggleParagraph('desc3')">Learn More</button>
+							<p>Diabetic patients require specialized foot care to prevent complications. Our services include regular
+								check-ups and ulcer prevention to manage foot health and other issues.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-money"></i>
-						<div class="desc">
-							<h3>Ingrown Toenail Surgery</h3>
-							<p>Ingrown toenails can be painful and prone to infection. Our safe surgical procedures effectively remove the ingrown nail, relieving pain and preventing future occurrences.</p>
+					<style>
+						.services6 {
+							background-image: url('images/Shockwave\ Therapy.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 20px;
+						}
+					</style>
+					<div class="services services6">
+						<!-- <i class="icon-pie-chart"></i> -->
+						<div class="desc desc6">
+							<h3 style="color: white;">Shockwave Therapy</h3>
+							<button onclick="toggleParagraph('desc6')">Learn More</button>
+							<p>Shockwave therapy is an advanced treatment using high-energy sound waves to stimulate healing in tissues
+								affected by chronic pain. It provides relief for conditions such as plantar fasciitis, tendonitis other
+								musculoskeletal issues.</p>
 						</div>
 					</div>
 				</div>
@@ -251,6 +354,16 @@
 				</div> -->
 			</div>
 		</div>
+		<script>
+			function toggleParagraph(descClass) {
+				const paragraph = document.querySelector(`.${descClass} p`);
+				if (paragraph.style.display === 'none' || paragraph.style.display === '') {
+					paragraph.style.display = 'block';
+				} else {
+					paragraph.style.display = 'none';
+				}
+			}
+		</script>
 	</div>
 
 	<!-- our works -->

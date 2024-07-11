@@ -561,9 +561,9 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 40px;
   color: #27E1CE;
 }
-#fh5co-services-section .services .desc {
+/* #fh5co-services-section .services .desc {
   padding-left: 70px;
-}
+} */
 #fh5co-services-section .services .desc h3 {
   font-size: 20px;
   font-weight: 700;

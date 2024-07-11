@@ -110,120 +110,292 @@
 		</div>
 	</div>-->
 
+	<style>
+		.service {
+			background-size: cover;
+			background-position: center;
+			padding: 20px;
+			color: white;
+			margin-bottom: 20px;
+		}
+	
+		.desc {
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 20px;
+			border-radius: 5px;
+		}
+	
+		.desc p {
+			display: none;
+		}
+	
+		button {
+			border-radius: 10px;
+			border: none;
+			background-color: #27E1CE;
+			color: white;
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+	</style>
 	<div id="fh5co-services-section" style="padding-bottom: 0px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
 					<h2>Our Awesome Feetures</h2>
-					<p>Benefits of Choosing Your Foot Podiatry.</p>
+					<p style="margin-bottom: 0px;">Benefits of Choosing Your Foot Podiatry.</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-laptop"></i>
-						<div class="desc">
-							<h3>Gait Analysis & Biomechanics</h3>
-							<p>Understanding how you move is crucial for diagnosing and treating foot issues. Our gait analysis examines walking patterns to identify abnormalities, tailoring treatments to improve your mobility and comfort.</p>
+					<style>
+						.services1 {
+							background-image: url('images/Gait analysis and biomechanics1.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 10px;
+						}
+					</style>
+					<div class="services services1">
+						<!-- <i class="icon-laptop"></i> -->
+						<div class="desc desc1">
+							<h3 style="color: white;">Gait Analysis & Biomechanics</h3>
+							<button onclick="toggleParagraph('desc1')">Learn More</button>
+							<p>Understanding how you move is crucial for treating foot issues. Our gait analysis examines walking
+								patterns to identify abnormalities, tailoring treatments to improve your mobility.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-server"></i>
-						<div class="desc">
-							<h3>Routine Nail and Skin Care</h3>
-							<p>Maintaining healthy nails and skin is essential for overall foot health. Our routine care includes nail trimming, fungal infection treatments, callus removal, and moisturizing to keep your feet in top condition.</p>
+					<style>
+						.services2 {
+							background-image: url('images/Custo\ orthotics.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 10px;
+						}
+					</style>
+					<div class="services services2">
+						<!-- <i class="icon-server"></i> -->
+						<div class="desc desc2">
+							<h3 style="color: white;">Routine Nail and Skin Care</h3>
+							<button onclick="toggleParagraph('desc2')">Learn More</button>
+							<p>Maintaining healthy nails and skin is essential for overall foot health. Our routine care includes nail trimming, fungal infection treatments and moisturizing to keep your feet in top condition.</p>
 						</div>
-					</div>
+					</div>	
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-money"></i>
-						<div class="desc">
-							<h3>Diabetic Foot Care</h3>
-							<p>Diabetic patients require specialized foot care to prevent complications. Our services include regular check-ups, ulcer prevention, and personalized advice to manage foot health and avoid infections and other issues.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-tablet"></i>
-						<div class="desc">
-							<h3>Sports Injury Management</h3>
+					<style>
+						.services4 {
+							background-image: url('images/Sports\ injury.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 10px;
+						}
+					</style>
+					<div class="services services4">
+						<!-- <i class="icon-tablet"></i> -->
+						<div class="desc desc4">
+							<h3 style="color: white;">Sports Injury Management</h3>
+							<button onclick="toggleParagraph('desc4')">Learn More</button>
 							<p>Sports activities can lead to foot injuries affecting the back, knee, and hip. We provide targeted treatments to manage and rehabilitate these injuries, ensuring a quick and safe return to your active lifestyle.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-line-chart"></i>
-						<div class="desc">
-							<h3>Children's Foot Care</h3>
+					<style>
+						.services5 {
+							background-image: url('images/Sports\ injury.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 20px;
+						}
+					</style>
+					<div class="services services5">
+						<!-- <i class="icon-line-chart"></i> -->
+						<div class="desc desc5">
+							<h3 style="color: white;">Children's Foot Care</h3>
+							<button onclick="toggleParagraph('desc5')">Learn More</button>
 							<p>Children's feet have unique needs as they grow. Our pediatric podiatry services focus on early detection and treatment of foot issues, ensuring healthy development. We provide care for flat feet, pigeon toes, and other common pediatric conditions.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Shockwave Therapy</h3>
-							<p>Shockwave therapy is an advanced treatment using high-energy sound waves to stimulate healing in tissues affected by chronic pain and injuries. It provides relief for conditions such as plantar fasciitis, tendonitis, and other musculoskeletal issues.</p>
+					<style>
+						.services3 {
+							background-image: url('images/diabetic\ footcare.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 20px;
+						}
+					</style>
+					<div class="services services3">
+						<!-- <i class="icon-money"></i> -->
+						<div class="desc desc3">
+							<h3 style="color: white;">Diabetic Foot Care</h3>
+							<button onclick="toggleParagraph('desc3')">Learn More</button>
+							<p>Diabetic patients require specialized foot care to prevent complications. Our services include regular
+								check-ups and ulcer prevention to manage foot health and other issues.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Ingrown Toenail Surgery</h3>
+					<style>
+						.services6 {
+							background-image: url('images/Shockwave\ Therapy.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 20px;
+						}
+					</style>
+					<div class="services services6">
+						<!-- <i class="icon-pie-chart"></i> -->
+						<div class="desc desc6">
+							<h3 style="color: white;">Shockwave Therapy</h3>
+							<button onclick="toggleParagraph('desc6')">Learn More</button>
+							<p>Shockwave therapy is an advanced treatment using high-energy sound waves to stimulate healing in tissues affected by chronic pain. It provides relief for conditions such as plantar fasciitis, tendonitis other musculoskeletal issues.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<style>
+						.services7 {
+							background-image: url('images/Shockwave\ Therapy.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 20px;
+						}
+					</style>
+					<div class="services services7">
+						<style>
+							.services7 {
+								background-image: url('images/Ingrown\ toe\ nail\ surgery.JPG');
+								background-size: cover;
+								background-position: center;
+								padding: 20px;
+								color: white;
+								margin-top: 20px;
+							}
+						</style>
+						<!-- <i class="icon-pie-chart"></i> -->
+						<div class="desc desc7">
+							<h3 style="color: white;">Ingrown Toenail Surgery</h3>
+							<button onclick="toggleParagraph('desc7')">Learn More</button>
 							<p>Ingrown toenails can be painful and prone to infection. Our safe surgical procedures effectively remove the ingrown nail, relieving pain and preventing future occurrences.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Custom Orthotics</h3>
+					<div class="services services8">
+						<style>
+							.services8 {
+								background-image: url('images/Custo\ orthotics.JPG');
+								background-size: cover;
+								background-position: center;
+								padding: 20px;
+								color: white;
+								margin-top: 20px;
+							}
+						</style>
+						<!-- <i class="icon-pie-chart"></i> -->
+						<div class="desc desc8">
+							<h3 style="color: white;">Custo Orthotics</h3>
+							<button onclick="toggleParagraph('desc8')">Learn More</button>
 							<p>Custom orthotics are specially designed shoe inserts that provide support and correct biomechanical issues. We tailor orthotics to your needs, alleviating pain and improving foot function.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Footwear Prescriptions</h3>
+					<div class="services services9">
+						<style>
+							.services9 {
+								background-image: url('images/Footwear\ Prescriptions.JPG');
+								background-size: cover;
+								background-position: center;
+								padding: 20px;
+								color: white;
+								margin-top: 20px;
+							}
+						</style>
+						<!-- <i class="icon-pie-chart"></i> -->
+						<div class="desc desc9">
+							<h3 style="color: white;">Footwear Prescriptions</h3>
+							<button onclick="toggleParagraph('desc9')">Learn More</button>
 							<p>Choosing the right shoes is crucial for foot health. We offer personalized footwear recommendations based on your foot structure, lifestyle, and existing conditions, ensuring optimal support and comfort.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Pain Management</h3>
+					<div class="services services10">
+						<style>
+							.services10 {
+								background-image: url('images/Pain\ management.JPG');
+								background-size: cover;
+								background-position: center;
+								padding: 20px;
+								color: white;
+								margin-top: 20px;
+							}
+						</style>
+						<!-- <i class="icon-pie-chart"></i> -->
+						<div class="desc desc10">
+							<h3 style="color: white;">Pain Management</h3>
+							<button onclick="toggleParagraph('desc10')">Learn More</button>
 							<p>Foot pain can significantly impact your quality of life. Our pain management services include a variety of treatments such as physical therapy, medication, and custom orthotics to alleviate pain and restore mobility.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Positive Patient Outcomes</h3>
+					<div class="services services11">
+						<style>
+							.services11 {
+								background-image: url('images/patient\ happy.jpg');
+								background-size: cover;
+								background-position: center;
+								padding: 20px;
+								color: white;
+								margin-top: 20px;
+							}
+						</style>
+						<!-- <i class="icon-pie-chart"></i> -->
+						<div class="desc desc11">
+							<h3 style="color: white;">Positive Patient Outcomes</h3>
+							<button onclick="toggleParagraph('desc11')">Learn More</button>
 							<p>High success rates in treatment and patient satisfaction.
 							Numerous testimonials and positive reviews from happy patients.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Preventive Care</h3>
+					<div class="services services12">
+						<style>
+							.services12 {
+								background-image: url('images/preventive.jpg');
+								background-size: cover;
+								background-position: center;
+								padding: 20px;
+								color: white;
+								margin-top: 20px;
+							}
+						</style>
+						<!-- <i class="icon-pie-chart"></i> -->
+						<div class="desc desc12">
+							<h3 style="color: white;">Preventive Care</h3>
+							<button onclick="toggleParagraph('desc12')">Learn More</button>
 							<p>Proactive approach to prevent foot problems before they start.
 							Regular check-ups and maintenance for long-term foot health.</p>
 						</div>
@@ -231,7 +403,18 @@
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
+
+	<script>
+		function toggleParagraph(descClass) {
+			const paragraph = document.querySelector(`.${descClass} p`);
+			if (paragraph.style.display === 'none' || paragraph.style.display === '') {
+				paragraph.style.display = 'block';
+			} else {
+				paragraph.style.display = 'none';
+			}
+		}
+	</script>
 
 	<!-- team -->
 	<!-- <div class="fh5co-team fh5co-light-grey-section">
