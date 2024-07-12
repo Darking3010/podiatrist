@@ -88,6 +88,132 @@
 			</div>
 		</aside>
 
+		<style>
+			/* General styling */
+			.map-stack {
+				position: relative;
+				perspective: 1500px;
+				/* Perspective for 3D effect */
+			}
+		
+			.map-container {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: opacity 0.5s;
+			}
+		
+			.map-container.active {
+				opacity: 1;
+				transform: rotateY(0deg) translateZ(0);
+			}
+		
+			.location-info {
+				position: absolute;
+				bottom: 20px;
+				left: 20px;
+				color: #fff;
+			}
+		
+			.location-info h3 {
+				margin: 0 0 5px;
+				font-size: 18px;
+			}
+		
+			.location-info p,
+			.location-info a {
+				margin: 0;
+				font-size: 14px;
+			}
+		
+			.location-info a {
+				color: #27E1CE;
+				text-decoration: none;
+			}
+		
+			.location-info a:hover {
+				text-decoration: underline;
+			}
+		
+			/* Navigation buttons */
+			.navigation {
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		
+			.nav-btn {
+				padding: 10px 20px;
+				margin: 0 10px;
+				background-color: #27E1CE;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				position: relative;
+				overflow: hidden;
+			}
+		
+			.nav-btn:hover {
+				background-color: #1aae9f;
+			}
+		
+			.btn-icon {
+				position: relative;
+				z-index: 1;
+			}
+		
+			.nav-btn::before,
+			.nav-btn::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				background-color: rgba(255, 255, 255, 0.2);
+				transition: transform 0.3s;
+			}
+		
+			.nav-btn::before {
+				left: 100%;
+			}
+		
+			.nav-btn::after {
+				right: 100%;
+			}
+		
+			.nav-btn:hover::before {
+				transform: translateX(-100%);
+			}
+		
+			.nav-btn:hover::after {
+				transform: translateX(100%);
+			}
+		
+			/* Media query for smaller screens */
+			@media (max-width: 768px) {
+				.location-info {
+					bottom: 10px;
+					left: 10px;
+				}
+		
+				.navigation {
+					bottom: 5;
+					width: 100%;
+					text-align: center;
+					padding: 20px 0;
+				}
+		
+				.nav-btn {
+					margin: 0 5px;
+					padding: 8px 15px;
+				}
+			}
+		</style>
 		<div class="fh5co-contact animate-box">
 			<div class="container">
 				<div class="row">
@@ -96,49 +222,91 @@
 						<ul class="contact-info">
 							<li><i class="icon-map"></i>Somewhere on Earth</li>
 							<li><i class="icon-phone"></i>0402795822</li>
-							<li><i class="icon-envelope"></i><a
-									href="mailto:yourfootpodiatry@gmail.com">yourfootpodiatry@gmail.com</a></li>
-							<li><i class="icon-globe"></i><a
-									href="http://www.yourfootpodiatry.com.au/">http://www.yourfootpodiatry.com.au/</a>
+							<li style="color: black;"><i class="icon-envelope"></i><a href="mailto:yourfootpodiatry@gmail.com">yourfootpodiatry@gmail.com</a>
 							</li>
+							<li><i class="icon-globe"></i><a
+									href="http://www.yourfootpodiatry.com.au/">http://www.yourfootpodiatry.com.au/</a></li>
 						</ul>
 					</div>
 					<div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 						<div class="row">
-							<!-- <div class="col-md-6">
-							<div class="form-group">
-								<input class="form-control" placeholder="Name" type="text">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<input class="form-control" placeholder="Email" type="text">
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<input value="Send Message" class="btn btn-primary" type="submit">
-							</div>
-						</div> -->
-							<div class="col-md-8 col-md-offset-2 col-md-push-2 animate-box">
-								<h2>Directions</h2>
-								<iframe class="maps"
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.6958651352993!2d145.07933377532578!3d-37.656353672015385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6494cfd9a21b3%3A0xf19fcb86e084dcde!2sYour%20Foot%20Podiatry%20South%20Morang!5e0!3m2!1sen!2sin!4v1719941262425!5m2!1sen!2sin"
-									style="border:0;" allowfullscreen="" loading="lazy"
-									referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<div class="col-md-12">
+								<h2 class="blahheading">Directions</h2>
+								<div class="map-stack" style="margin-top: 80px;">
+									<div class="map-container active" id="map1">
+										<iframe class="maps"
+											src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.6958651352993!2d145.07933377532578!3d-37.656353672015385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6494cfd9a21b3%3A0xf19fcb86e084dcde!2sYour%20Foot%20Podiatry%20South%20Morang!5e0!3m2!1sen!2sin!4v1719941262425!5m2!1sen!2sin"
+											style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<div class="location-info">
+											<h3>Your Foot Podiatry South Morang</h3>
+											<!-- <p>@Rivergum Village Medical Centre<br>(03) 9407 8500</p>
+											<a href="https://g.co/kgs/TR6kjbU" target="_blank">Google Maps Link</a> -->
+										</div>
+									</div>
+									<div class="map-container" id="map2">
+										<iframe class="maps"
+											src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.757624935177!2d144.91779707531936!3d-37.537210372046225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad653aebdb71507%3A0x9d248d08dc2e40a7!2sYour%20Foot%20Podiatry%20Mickleham!5e0!3m2!1sen!2sin!4v1720781826790!5m2!1sen!2sin"
+											style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<div class="location-info">
+											<h3>Your Foot Podiatry Mickleham</h3>
+											<!-- <p>@Merrifield City Medical Centre<br>(03) 7035 9132</p>
+											<a href="https://g.co/kgs/nEJDg4L" target="_blank">Google Maps Link</a> -->
+										</div>
+									</div>
+									<div class="map-container" id="map3">
+										<iframe class="maps"
+											src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50620.12687603615!2d144.87917223894456!3d-37.5372031875817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad653837d979fc1%3A0xec96091d1367b801!2sYour%20Foot%20Podiatry%20Kalkallo!5e0!3m2!1sen!2sin!4v1720781983216!5m2!1sen!2sin"
+											style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<div class="location-info">
+											<h3>Your Foot Podiatry Kalkallo</h3>
+											<!-- <p>@Medical Select Kalkallo<br>(03) 9123 4343</p>
+											<a href="https://g.co/kgs/rE5tCQH" target="_blank">Google Maps Link</a> -->
+										</div>
+									</div>
+									<div class="map-container" id="map4">
+										<iframe class="maps"
+											src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50620.12687603615!2d144.87917223894456!3d-37.5372031875817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad64bf956ec73d9%3A0x84d68e43b3ab8b4e!2sYour%20Foot%20Podiatry%20Mernda!5e0!3m2!1sen!2sin!4v1720782057443!5m2!1sen!2sin"
+											style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<div class="location-info">
+											<h3>Your Foot Podiatry Mernda</h3>
+											<!-- <p>@Mernda Regent St Medical<br>(03) 7019 0346</p>
+											<a href="https://g.co/kgs/4cempmv" target="_blank">Google Maps Link</a> -->
+										</div>
+									</div>
+									<div class="navigation">
+										<button class="nav-btn prev" onclick="changeMap(-1)">
+											<span class="btn-icon">&larr;</span>
+										</button>
+										<button class="nav-btn next" onclick="changeMap(1)">
+											<span class="btn-icon">&rarr;</span>
+										</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script>
+			let currentMap = 1;
+				const totalMaps = 4;
 
-		<div id="fh5co-pricing-section">
+				function changeMap(direction) {
+					currentMap += direction;
+					if (currentMap < 1) {
+						currentMap = totalMaps;
+					} else if (currentMap > totalMaps) {
+						currentMap = 1;
+					}
+					document.querySelectorAll('.map-container').forEach(map => {
+						map.classList.remove('active');
+					});
+					document.getElementById(`map${currentMap}`).classList.add('active');
+				}
+		</script>
+
+		<div id="fh5co-pricing-section" style="margin-top: 300px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
