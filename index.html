@@ -128,13 +128,120 @@
 				</div>
 				<div class="col-md-2 col-sm-4 col-xs-12 animate-box left-align">
 					<figure>
-						<img style="padding: 0%; height: 100%;" src="images/2.jpg" alt="yourfootpodiatry" class="img-responsive">
+						<a href="about.html"><button style="margin-top: 20px;">Learn more About Me!</button></a>
+						<!-- <img style="padding: 0%; height: 100%;" src="images/2.jpg" alt="yourfootpodiatry" class="img-responsive"> -->
 					</figure>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<style>
+		.our-team{
+			position: relative;
+			overflow: hidden;
+		}
+		.our-team img{
+			width: 100%;
+			height: auto;
+			transform: scale(1.2,1.2) translateX(-25px);
+			transition: all 0.20s linear 0s;
+		}
+		.our-team .over-layer{
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.1);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.our-team .team-content{
+			width: 90%;
+			position: absolute;
+			bottom: -40px;
+			padding: 0 25px;
+			transition: all 0.40s ease 0s;
+		}
+		.our-team:hover .team-content{
+			bottom: 1%;
+		}
+		.our-team .title{
+			font-size: 20px;
+			font-weight: bold;
+			color: #fff;
+			margin: 20px 0 5px;
+			text-transform: uppercase;
+		}
+		.our-team .post{
+		display: block;
+		font-size: 17px;
+		color: #fff;
+			margin-bottom: 5px;
+			text-transform: capitalize;
+		}
+		.our-team .description{
+			font-size: 15px;
+			color: #fff;
+			transform: translateY(100%);
+			transition: all 0.30s ease 0.1s;
+		}
+		.our-team:hover .description{
+			transform: translateY(0);
+		}
+		.our-team .social-links{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			width: 10%;
+			height: 100%;
+			background: #30a5ab;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.our-team .social-links li{
+			margin: 20px 0;
+		}
+		.our-team .social-links li a{
+			color: #fff;
+			padding: 10px 0;
+		}
+		.our-team .social-links li a:hover{
+			text-decoration: none;
+		}
+		@media only screen and (max-width: 990px){
+			.our-team{ margin-bottom: 20px; }
+		}
+	</style>
+	<div class="fh5co-about animate-box" style="padding-bottom: 0px;">
+		<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+			<h2>Meet the Brains</h2>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-6">
+					<div class="our-team">
+						<img src="images/joel.jpg" alt="Joel">
+						<div class="over-layer">
+							<div class="team-content">
+								<h3 class="title">Joel Joseph</h3>
+								<span class="post">Senior Podiatrist / Director / Founder</span>
+								<p class="description">Joel Joseph, the founder of Your Foot Podiatry, is a dedicated podiatrist with over eight years of experience. He holds
+								a Bachelor of Health Sciences and a Master's degree in Podiatric Medicine and Practice from La Trobe University. Joel's
+								expertise includes gait analysis, orthotic prescription, ingrown toenail surgery, and sports injury treatment.
+								
+								Since founding Your Foot Podiatry in October 2019, the practice has expanded to multiple locations, including Mill Park
+								/ South Morang, Mernda, Mickleham, and Kalkallo. Outside of work, Joel enjoys family time, camping, and traveling. His
+								global upbringing and passion for sports medicine enrich his patient care approach.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Features -->
 	<style>
@@ -150,10 +257,6 @@
 			background-color: rgba(0, 0, 0, 0.5);
 			padding: 20px;
 			border-radius: 5px;
-		}
-	
-		.desc p {
-			display: none;
 		}
 	
 		button {
@@ -189,9 +292,9 @@
 						<!-- <i class="icon-laptop"></i> -->
 						<div class="desc desc1">
 							<h3 style="color: white;">Gait Analysis &<br> Biomechanics</h3>
-							<button onclick="toggleParagraph('desc1')">Learn More</button>
-							<p>Understanding how you move is crucial for treating foot issues. Our gait analysis examines walking
-								patterns to identify abnormalities, tailoring treatments to improve your mobility.</p>
+							<a href="services.html"><button>Learn More</button></a>
+							<!-- <p>Understanding how you move is crucial for treating foot issues. Our gait analysis examines walking
+								patterns to identify abnormalities, tailoring treatments to improve your mobility.</p> -->
 						</div>
 					</div>
 				</div>
@@ -210,9 +313,10 @@
 						<!-- <i class="icon-server"></i> -->
 						<div class="desc desc2">
 							<h3 style="color: white;">Routine Nail and<br> Skin Care</h3>
-							<button onclick="toggleParagraph('desc2')">Learn More</button>
-							<p>Maintaining healthy nails and skin is essential for overall foot health. Our routine care includes nail
-								trimming, fungal infection treatments and moisturizing to keep your feet in top condition.</p>
+							<a href="services.html"><button>Learn More</button></a>
+							<!-- <p><a href="about.html" class="btn btn-primary btn-outline with-arrow">About Us!<i class="icon-arrow-right"></i></a></p> -->
+							<!-- <p>Maintaining healthy nails and skin is essential for overall foot health. Our routine care includes nail
+								trimming, fungal infection treatments and moisturizing to keep your feet in top condition.</p> -->
 						</div>
 					</div>
 				</div>
@@ -231,10 +335,33 @@
 						<!-- <i class="icon-tablet"></i> -->
 						<div class="desc desc4">
 							<h3 style="color: white;">Sports Injury<br> Management</h3>
-							<button onclick="toggleParagraph('desc4')">Learn More</button>
-							<p>Sports activities can lead to foot injuries affecting the back, knee, and hip. We provide targeted
+							<a href="services.html"><button>Learn More</button></a>
+							<!-- <button onclick="toggleParagraph('desc4')">Learn More</button> -->
+							<!-- <p>Sports activities can lead to foot injuries affecting the back, knee, and hip. We provide targeted
 								treatments to manage and rehabilitate these injuries, ensuring a quick and safe return to your active
-								lifestyle.</p>
+								lifestyle.</p> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<style>
+						.services7 {
+							background-image: url('images/diabetic\ footcare.JPG');
+							background-size: cover;
+							background-position: center;
+							padding: 20px;
+							color: white;
+							margin-top: 10px;
+						}
+					</style>
+					<div class="services services7">
+						<!-- <i class="icon-pie-chart"></i> -->
+						<div class="desc desc7">
+							<h3 style="color: white;">Ingrown Toenail Surgery</h3>
+							<a href="services.html"><button>Learn More</button></a>
+							<!-- <button onclick="toggleParagraph('desc7')">Learn More</button> -->
+							<!-- <p>Ingrown toenails can be painful and prone to infection. Our safe surgical procedures effectively remove
+												the ingrown nail, relieving pain and preventing future occurrences.</p> -->
 						</div>
 					</div>
 				</div>
@@ -246,17 +373,18 @@
 							background-position: center;
 							padding: 20px;
 							color: white;
-							margin-top: 20px;
+							margin-top: 10px;
 						}
 					</style>
 					<div class="services services5">
 						<!-- <i class="icon-line-chart"></i> -->
 						<div class="desc desc5">
 							<h3 style="color: white;">Children's Foot Care</h3>
-							<button onclick="toggleParagraph('desc5')">Learn More</button>
-							<p>Children's feet have unique needs as they grow. Our pediatric podiatry services focus on early detection
+							<a href="services.html"><button>Learn More</button></a>
+							<!-- <button onclick="toggleParagraph('desc5')">Learn More</button> -->
+							<!-- <p>Children's feet have unique needs as they grow. Our pediatric podiatry services focus on early detection
 								and treatment of foot issues, ensuring healthy development. We provide care for flat feet, pigeon toes,
-								and other common pediatric conditions.</p>
+								and other common pediatric conditions.</p> -->
 						</div>
 					</div>
 				</div>
@@ -268,44 +396,24 @@
 							background-position: center;
 							padding: 20px;
 							color: white;
-							margin-top: 20px;
+							margin-top: 10px;
 						}
 					</style>
 					<div class="services services3">
 						<!-- <i class="icon-money"></i> -->
 						<div class="desc desc3">
 							<h3 style="color: white;">Diabetic Foot Care</h3>
-							<button onclick="toggleParagraph('desc3')">Learn More</button>
-							<p>Diabetic patients require specialized foot care to prevent complications. Our services include regular
-								check-ups and ulcer prevention to manage foot health and other issues.</p>
+							<a href="services.html"><button>Learn More</button></a>
+							<!-- <button onclick="toggleParagraph('desc3')">Learn More</button> -->
+							<!-- <p>Diabetic patients require specialized foot care to prevent complications. Our services include regular
+								check-ups and ulcer prevention to manage foot health and other issues.</p> -->
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 animate-box">
-					<style>
-						.services6 {
-							background-image: url('images/Shockwave\ Therapy.JPG');
-							background-size: cover;
-							background-position: center;
-							padding: 20px;
-							color: white;
-							margin-top: 20px;
-						}
-					</style>
-					<div class="services services6">
-						<!-- <i class="icon-pie-chart"></i> -->
-						<div class="desc desc6">
-							<h3 style="color: white;">Shockwave Therapy</h3>
-							<button onclick="toggleParagraph('desc6')">Learn More</button>
-							<p>Shockwave therapy is an advanced treatment using high-energy sound waves to stimulate healing in tissues
-								affected by chronic pain. It provides relief for conditions such as plantar fasciitis, tendonitis other
-								musculoskeletal issues.</p>
-						</div>
-					</div>
-				</div>
+				
 				<div class="col-md-12 text-center animate-box" style="margin-top: 20px;">
-					<h3>Want to know more?</h3>
-					<p><a href="about.html" class="btn btn-primary btn-outline with-arrow">About Us!<i class="icon-arrow-right"></i></a></p>
+					<h3>Want to know more about our Services?</h3>
+					<p><a href="services.html" class="btn btn-primary btn-outline with-arrow">Services<i class="icon-arrow-right"></i></a></p>
 				</div>
 				<!-- <div class="col-md-4 animate-box">
 					<div class="services">
@@ -363,16 +471,6 @@
 				</div> -->
 			</div>
 		</div>
-		<script>
-			function toggleParagraph(descClass) {
-				const paragraph = document.querySelector(`.${descClass} p`);
-				if (paragraph.style.display === 'none' || paragraph.style.display === '') {
-					paragraph.style.display = 'block';
-				} else {
-					paragraph.style.display = 'none';
-				}
-			}
-		</script>
 	</div>
 
 	<!-- our works -->
