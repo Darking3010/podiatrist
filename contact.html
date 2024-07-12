@@ -294,8 +294,8 @@
 			const maps = document.querySelectorAll('.map-container');
 			const locationInfo = [
 				{
-					address: "Somewhere on Earth",
-					phone: "0402795822",
+					address: "Mernda Regent St Medical Centre",
+					phone: "(03) 9407 8500",
 					email: "yourfootpodiatry@gmail.com",
 					website: "http://www.yourfootpodiatry.com.au/"
 				},
@@ -339,11 +339,11 @@
 				contactInfo.innerHTML = `
 		            <li><i class="icon-map"></i>${info.address}</li>
 		            <li><i class="icon-phone"></i>${info.phone}</li>
-		            <li style="color: black;"><i class="icon-envelope"></i><a href="mailto:${info.email}">${info.email}</a></li>
 		            <li><i class="icon-globe"></i><a href="${info.website}">${info.website}</a></li>
-		        `;
-			}
-
+					`;
+				}
+				
+			// <li style="color: black;"><i class="icon-envelope"></i><a href="mailto:${info.email}">${info.email}</a></li>
 			// Initialize with the first contact info
 			updateContactInfo(0);
 		</script>
