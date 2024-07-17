@@ -22,6 +22,8 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	</head>
@@ -69,24 +71,115 @@
 	  	</div>
 	</aside>
 
-	<div class="fh5co-about animate-box">
-		<div class="col-md-5 col-md-offset-3 text-center fh5co-heading">
-			<h2>Your Foot Podiatry</h2>
-			<p>At Your Foot Podiatry, we offer comprehensive services including orthotics, sports injury management, diabetic foot care, and general foot health. Our custom treatment plans are tailored to meet your individual needs.<p>
-		</div>	
+	<style>
+		.team-member {
+			display: flex;
+			align-items: flex-start;
+			margin: 20px 0;
+		}
+	
+		.team-member img {
+			width: 272px;
+			/* Adjust the width as needed */
+			height: auto;
+			border-radius: 10px;
+			/* Optional: Adds rounded corners to the image */
+			margin-right: 20px;
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+			/* Adds a shadow for 3D effect */
+			transform: rotateY(10deg);
+			/* Slight 3D rotation */
+		}
+	
+		.over-layer {
+			flex-grow: 1;
+			transform: rotateY(-10deg);
+			/* Slight 3D rotation */
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+			/* Adds a shadow for 3D effect */
+			transition: transform 0.3s ease-in-out;
+		}
+	
+		.team-member:hover .over-layer {
+			transform: rotateY(0deg);
+			/* Rotate to original position on hover */
+		}
+	
+		.team-content {
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 20px;
+			border-radius: 5px;
+			color: white;
+			/* Adjust text color as needed */
+		}
+	
+		.team-content .title {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+	
+		.team-content .post {
+			font-size: 18px;
+			margin-bottom: 15px;
+			display: block;
+		}
+	
+		.team-content .description {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+	
+		/* Media query for mobile devices */
+		@media (max-width: 768px) {
+			.team-member {
+				flex-direction: column;
+				/* Stack items vertically */
+				align-items: center;
+				/* Center align items */
+			}
+	
+			.team-member img {
+				margin-right: 0;
+				/* Remove right margin */
+				margin-bottom: 20px;
+				/* Add bottom margin */
+				transform: none;
+				/* Remove 3D rotation */
+			}
+	
+			.over-layer {
+				transform: none;
+				/* Remove 3D rotation */
+			}
+		}
+	</style>
+	<div class="fh5co-about animate-box" style="padding-bottom: 0px;">
+		<!-- <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+			<h2>Meet the Brains</h2>
+		</div> -->
+		<br>
 		<div class="container">
-			<div class="col-md-2 animate-box">
-				<figure class="blah1" style="height: 150px; width: 150px;">
-					<img src="images/logo.png" alt="LOGO" class="img-responsive" style="height: 150px;">
-				</figure>
-			</div>
-			<div class="col-md-10 col-md-push-1 animate-box" style="padding-bottom: 0px; padding-top: 10px;">
-				<!-- <h2>Your Foot Podiatry</h2> -->
-				<p>At Your Foot Podiatry, we specialize in comprehensive foot care, offering services such as orthotics, sports injury
-				management, diabetic foot care, and general foot health. Our experienced podiatrists diagnose and treat a variety of
-				foot and ankle conditions, from common issues like plantar fasciitis and bunions to complex problems requiring advanced
-				care. We create custom treatment plans tailored to your specific needs, ensuring optimal foot health and mobility. Trust
-				Your Foot Podiatry to keep you moving comfortably and confidently.</p>
+			<div class="row">
+				<div class="col-md-12 col-sm-6">
+					<div class="our-team">
+						<div class="team-member">
+							<img src="images/logo.png" alt="Joel">
+							<div class="over-layer">
+								<div class="team-content">
+									<h3 class="title"><strong>Your Foot Podiatry</strong></h3>
+									<span class="post">Joel Joseph : Senior Podiatrist / Director / Founder</span>
+									<p class="description">
+										At Your Foot Podiatry, we specialize in comprehensive foot care, offering services such as orthotics, sports injury
+										management, diabetic foot care, and general foot health. Our experienced podiatrists diagnose and treat a variety of
+										foot and ankle conditions, from common issues like plantar fasciitis and bunions to complex problems requiring advanced
+										care. We create custom treatment plans tailored to your specific needs, ensuring optimal foot health and mobility. Trust
+										Your Foot Podiatry to keep you moving comfortably and confidently.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -95,168 +188,86 @@
 		<div class="container">
 			<div class="row" style="margin-bottom: -30px;">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" style="margin-bottom: 25px;">
-					<h2>Meet our Founder</h2>
+					<h2>Meet the Founder</h2>
 				</div>
 			</div>
-			<div class="row" style="margin-top: 25px;">
-				<div class="text-center">
-					<details>
-						<h4 style="margin-bottom: 5px;">Senior Podiatrist / Director / Founder</h4>
-						<summary>About Joel Joseph</summary>
-						<p>Joel Joseph is a highly skilled and dedicated podiatrist with over eight years of experience in the field. He
-							completed his Bachelor of Health Sciences, majoring in Anatomy and Physiology, and went on to earn a Master's degree
-							in Podiatric Medicine and Practice from La Trobe University in Bundoora, graduating in 2017. Joel's journey in podiatry began while working with Active Feet during his studies. This experience sparked his
-							interest in footwear and biomechanics, making him exceptionally proficient in gait analysis and addressing
-							biomechanical issues. His lifelong passion for sports, including Basketball, Cricket, Badminton, and Australian
-							Rules Football, has fueled his keen interest in sports medicine and biomechanics. At Your Foot Podiatry, Joel revels in utilizing the latest technologies to treat foot and ankle pain and
-							sports-related injuries. His expertise extends to all aspects of podiatry, including orthotic prescription, ingrown
-							toenail surgery, nail and skin care, and providing footwear advice. Joel is committed to helping his patients
-							achieve a pain-free life and finds immense satisfaction in his work. Joel founded Your Foot Podiatry in October 2019, and since then, the practice has grown to multiple clinical
-							locations and collaborations. Your Foot Podiatry is now available at Mill Park / South Morang, Mernda, Mickleham,
-							and Kalkallo. Outside of work, Joel enjoys spending time with his family, camping, and traveling. His global
-							upbringing has enriched his perspective and approach to patient care, making him a well-rounded and compassionate
-							practitioner.</p>
-					</details>
-					<details>
-						<summary>Certifications and Professional Memberships</summary>
-						<p>
-							<li>AHPRA Registered Podiatrist</li>
-							<li>Bachelor of Health Sciences, majoring in Anatomy and Physiology</li>
-							<li>⁠Master's degree in Podiatric Medicine and Practice</li>
-						</p>
-					</details>
-					<details>
-						<summary>Specialized Training and Continuing Education</summary>
-						<p>
-							<li>Advanced Biomechanics and Gait Analysis Training</li>
-							<li>Continuing education in sports podiatry and orthotic technology</li>
-						</p>
-					</details>
-					<details>
-						<summary>Current Endeavors</summary>
-						<p>Joel is undertaking Podiatry ESM (Endorsement for Scheduled Medication Prescription)</p>
-					</details>
-					<!-- <h3>Joel Joseph</h3> -->
-					<!-- <p>Joel Joseph is a highly skilled and dedicated podiatrist with over eight years of experience in the field. He completed his Bachelor of Health Sciences, majoring in Anatomy and Physiology, and went on to earn a Master’s degree in Podiatric Medicine and Practice from La Trobe University in Bundoora, graduating in 2017.</p>
-					<p>Joel's journey in podiatry began while working with Active Feet during his studies. This experience sparked his interest in footwear and biomechanics, making him exceptionally proficient in gait analysis and addressing biomechanical issues. His lifelong passion for sports, including Basketball, Cricket, Badminton, and Australian Rules Football, has fueled his keen interest in sports medicine and biomechanics.</p>
-					<p>At Your Foot Podiatry, Joel revels in utilizing the latest technologies to treat foot and ankle pain and sports-related injuries. His expertise extends to all aspects of podiatry, including orthotic prescription, ingrown toenail surgery, nail and skin care, and providing footwear advice. Joel is committed to helping his patients achieve a pain-free life and finds immense satisfaction in his work.</p>
-					<p>Joel founded Your Foot Podiatry in October 2019, and since then, the practice has grown to multiple clinical locations and collaborations. Your Foot Podiatry is now available at Mill Park / South Morang, Mernda, Mickleham, and Kalkallo. Outside of work, Joel enjoys spending time with his family, camping, and traveling. His global upbringing has enriched his perspective and approach to patient care, making him a well-rounded and compassionate practitioner.</p> -->
-					
-					<!-- <h4 style="margin-bottom: 5px;">Certifications and Professional Memberships:</h4>
-						•	Member of the Australian Podiatry Association<br>
-						•	Certified in Advanced Foot and Ankle Surgery<br><br>
-					
-					<h4 style="margin-bottom: 5px;">Specialized Training and Continuing Education:</h4>
-						•	Advanced Biomechanics and Gait Analysis Training<br>
-						•	Continuing education in sports podiatry and orthotic technology<br><br>
-					
-					<h4 style="margin-bottom: 5px;">Current Endeavors:</h4>
-						•	Joel is undertaking Podiatry ESM (Endorsement for Scheduled Medication Prescription)<br><br>
-					</p>	 -->
-				</div>
-
-				<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-				<div class="elfsight-app-827dadee-5b9f-4619-aa15-b2e15554b091" data-elfsight-app-lazy style="margin-top: 20px;"></div>
-				
-				<!-- <p>rest of the team can be shown via the help of the bottom grids<p> -->
-				<!-- <div class="row" style="margin-bottom: -30px;">
-					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" style="margin-bottom: 0px;">
-						<h2 style="margin-top: 100px; margin-bottom: 30px;">Services</h2>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-tablet"></i>
-						<div class="desc">
-							<h3>Personalized Attention</h3>
-							<p>One-on-one consultations to thoroughly understand and address your concerns. Detailed and
-								personalized treatment plans.</p>
+			<div class="row">
+				<div class="col-md-12 col-offset-0 to-animate">
+					<div class="wrap-testimony animate-box">
+						<div class="owl-carousel-fullwidth">
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/joel.jpg" alt="user">
+									</figure>
+									<blockquote>
+										<p>Joel Joseph</p>
+										<p><strong>"Senior Podiatrist / Director / Founder"</strong></p>
+									</blockquote>
+									<span>Joel Joseph is a highly skilled and dedicated podiatrist with over eight years of experience in the field. He completed
+									his Bachelor of Health Sciences, majoring in Anatomy and Physiology, and went on to earn a Master's degree in Podiatric
+									Medicine and Practice from La Trobe University in Bundoora, graduating in 2017. Joel's journey in podiatry began while
+									working with Active Feet during his studies. This experience sparked his interest in footwear and biomechanics, making
+									him exceptionally proficient in gait analysis and addressing biomechanical issues. His lifelong passion for sports,
+									including Basketball, Cricket, Badminton, and Australian Rules Football, has fueled his keen interest in sports medicine
+									and biomechanics. At Your Foot Podiatry, Joel revels in utilizing the latest technologies to treat foot and ankle pain
+									and sports-related injuries. His expertise extends to all aspects of podiatry, including orthotic prescription, ingrown
+									toenail surgery, nail and skin care, and providing footwear advice. Joel is committed to helping his patients achieve a
+									pain-free life and finds immense satisfaction in his work. Joel founded Your Foot Podiatry in October 2019, and since
+									then, the practice has grown to multiple clinical locations and collaborations. Your Foot Podiatry is now available at
+									Mill Park / South Morang, Mernda, Mickleham, and Kalkallo. Outside of work, Joel enjoys spending time with his family,
+									camping, and traveling. His global upbringing has enriched his perspective and approach to patient care, making him a
+									well-rounded and compassionate practitioner.</span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/logo.png" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Certifications and Professional Memberships"</p>
+									</blockquote>
+									<span>
+										<ul>
+											<li style="list-style: none;">AHPRA Registered Podiatrist</li>
+											<li style="list-style: none;">Bachelor of Health Sciences, majoring in Anatomy and Physiology</li>
+											<li style="list-style: none;">Master's degree in Podiatric Medicine and Practice</li>
+										</ul>
+									</span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/joel.jpg" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Specialized Training and Continuing Education"</p>
+									</blockquote>
+									<span><ul>
+										<li style="list-style: none;">Advanced Biomechanics and Gait Analysis Training</li>
+										<li style="list-style: none;">Continuing education in sports podiatry and orthotic technology</li>
+									</ul></span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/logo.png" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Current Endeavors"</p>
+									</blockquote>
+									<span>Joel is undertaking Podiatry ESM (Endorsement for Scheduled Medication Prescription)</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-line-chart"></i>
-						<div class="desc">
-							<h3>Convenient Location</h3>
-							<p>Easily accessible location with ample parking. Flexible appointment scheduling, including
-								evening and weekend hours.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Holistic Approach</h3>
-							<p>Focus on overall foot health and prevention of future issues. Comprehensive assessments
-								considering overall lifestyle and health.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Patient Education</h3>
-							<p>Detailed explanations and education on foot health, conditions, and treatments. Guidance on
-								at-home care and preventive measures.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Comfort and Care</h3>
-							<p>Friendly and supportive staff ensuring a comfortable visit. Clean, modern, and welcoming
-								clinic environment.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Insurance and Options</h3>
-							<p>Assistance with insurance claims and paperwork. Flexible payment plans and options to
-								accommodate financial needs.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>EPC/CDM plans Medicare rebate</h3>
-							<p>A Medicare rebate for podiatry can be accessed under the CDM Program, which is the Chronic Disease Management Program
-							(sometimes referred to as EPC or Team Care Arrangement).</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Positive Patient Outcomes</h3>
-							<p>High success rates in treatment and patient satisfaction.
-							Numerous testimonials and positive reviews from happy patients.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Preventive Care</h3>
-							<p>Proactive approach to prevent foot problems before they start.
-							Regular check-ups and maintenance for long-term foot health.</p>
-						</div>
-					</div>
-				</div> -->
 			</div>
 		</div>
-	</div>	
+	</div>
 
 	<!-- team -->
 	<!-- <div class="fh5co-team fh5co-light-grey-section">
@@ -363,15 +374,19 @@
 	</div>
 
 	<!-- Footer -->
+	<!-- Footer -->
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
-			<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+			<div class="col-md-2 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+				<img src="images/logo.png" alt="yourfootpodiatry" class="img-responsive">
+			</div>
+			<div class="col-md-2 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>About Us</h3>
 				<p>Receive treatment from highly qualified and experienced podiatrist.</p>
-				<p><a href="work.html" class="btn btn-primary btn-outline with-arrow btn-sm">Start Now<i
+				<p><a href="work.html" class="btn btn-primary btn-outline with-arrow btn-sm">Book Now!<i
 							class="icon-arrow-right"></i></a></p>
 			</div>
-			<div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+			<div class="col-md-5 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>Pages</h3>
 				<ul class="float">
 					<li><a href="index.html">Home</a></li>
@@ -397,7 +412,6 @@
 					<li><a href="faq.html"><i class="fa-solid fa-clipboard-question"></i></a></li>
 				</ul>
 			</div>
-	
 			<div class="col-md-12 fh5co-copyright text-center">
 				<p>&copy; 2024 Your Foot Podiatry. All Rights Reserved.
 				<p>
@@ -411,6 +425,7 @@
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.flexslider-min.js"></script>
 	<script src="js/main.js"></script>
 	</body>
