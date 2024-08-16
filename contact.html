@@ -144,7 +144,7 @@
 													href="https://rivergummedical.com.au/appointments-at-rivergum-village-medical-centre/"
 													target="_blank">rivergummedical.com.au</a></li> -->
 											<button class="butblah"
-												onclick="window.location.href='work.html'">Book
+												onclick="window.location.href='https://rivergummedical.com.au/doctors/joel-joseph-podiatrist/'">Book
 												Now</button>
 										</ul>
 									</div>
@@ -162,8 +162,7 @@
 											<!-- <li class="poda">Email: location2@yourfootpodiatry.com</li>
 											<li class="poda">Website: <a href="http://www.yourfootpodiatry.com.au/"
 													target="_blank">yourfootpodiatry.com.au</a></li> -->
-													<button class="butblah" onclick="window.location.href='work.html'">Book
-														Now</button>
+													<button class="butblah" id="bookNowMap2">Book Now</button>
 										</ul>
 									</div>
 								</div>
@@ -180,8 +179,7 @@
 											<!-- <li class="poda">Email: location3@yourfootpodiatry.com</li>
 											<li class="poda">Website: <a href="https://medicalselect.com.au/clinic/kalkallomedicalselect/"
 													target="_blank">medicalselect.com.au</a></li> -->
-													<button class="butblah" onclick="window.location.href='work.html'">Book
-														Now</button>
+													<button class="butblah" id="bookNowMap3">Book Now</button>
 										</ul>
 									</div>
 								</div>
@@ -197,7 +195,7 @@
 											<h5 class="category" style="color: black;">Wednesday's<br>9am to 1pm</h5>
 											<!-- <li class="poda">Website: <a href="http://www.yourfootpodiatry.com.au/"
 													target="_blank">yourfootpodiatry.com.au</a></li> -->
-													<button class="butblah" onclick="window.location.href='work.html'">Book
+													<button class="butblah" onclick="window.location.href='https://www.hotdoc.com.au/medical-centres/mernda-VIC-3754/mernda-regent-street-clinic/doctors/joel-joseph-podiatrist'">Book
 														Now</button>
 										</ul>
 									</div>
@@ -208,6 +206,85 @@
 				</div>
 			</div>
 		</div>
+		<!-- Pop-up Message Container -->
+		<style>
+			.popup {
+				display: none;
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		
+			/* Popup content */
+			.popup-content {
+				background-color: white;
+				margin: 15% auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: 80%;
+				max-width: 300px;
+				text-align: center;
+			}
+		
+			/* Close button */
+			.close {
+				color: black;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+			}
+		
+			.close:hover,
+			.close:focus {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
+			}
+		</style>
+		<div id="popupMessage" class="popup">
+			<div class="popup-content">
+				<span class="close" style="margin-top: 0px;">&times;</span>
+				<p style="margin-top: 20px; margin-bottom: 0px;">Booking link closed, call to book an appointment.</p>
+				<button class="butblah" onclick="window.location.href='work.html'">Call Now</button>
+			</div>
+		</div>
+		<script>
+			// Get the modal
+			var popupMessage = document.getElementById("popupMessage");
+
+			// Get the buttons that open the modal
+			var bookNowMap2 = document.getElementById("bookNowMap2");
+			var bookNowMap3 = document.getElementById("bookNowMap3");
+
+			// Get the <span> element that closes the modal
+			var closeBtn = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the buttons, open the modal 
+			bookNowMap2.onclick = function () {
+				popupMessage.style.display = "block";
+			}
+
+			bookNowMap3.onclick = function () {
+				popupMessage.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			closeBtn.onclick = function () {
+				popupMessage.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function (event) {
+				if (event.target == popupMessage) {
+					popupMessage.style.display = "none";
+				}
+			}
+		</script>
 
 		<div id="fh5co-pricing-section">
 			<div class="container">
