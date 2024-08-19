@@ -140,7 +140,7 @@
 									</button>
 								</h5>
 								<h5 class="category" style="color: black;">Saturday's<br>9am to 2pm</h5>
-								<button class="butblah" id="bookNowMap2">Book Now</button>
+								<button class="butblah" id="bookNowMap1">Book Now</button>
 							</div>
 						</div>
 					</a>
@@ -157,7 +157,7 @@
 									</button>
 								</h5>
 								<h5 class="category" style="color: black;">Friday's<br>9am to 1:30pm</h5>
-								<button class="butblah" id="bookNowMap3">Book Now</button>
+								<button class="butblah" id="bookNowMap2">Book Now</button>
 							</div>
 						</div>
 					</a>
@@ -277,42 +277,54 @@
 			cursor: pointer;
 		}
 	</style>
-	<div id="popupMessage" class="popup">
+	<div id="popupMessage1" class="popup">
 		<div class="popup-content">
 			<span class="close" style="margin-top: 0px;">&times;</span>
 			<p style="margin-top: 20px; margin-bottom: 0px;">Booking link closed, call to book an appointment.</p>
-			<button class="butblah" onclick="window.location.href='work.html'">Call Now</button>
+			<button class="butblah" onclick="window.location.href='tel:0370359132'">Call Now</button>
+		</div>
+	</div>
+	<div id="popupMessage2" class="popup">
+		<div class="popup-content">
+			<span class="close" style="margin-top: 0px;">&times;</span>
+			<p style="margin-top: 20px; margin-bottom: 0px;">Booking link closed, call to book an appointment.</p>
+			<button class="butblah" onclick="window.location.href='tel:0391234343'">Call Now</button>
 		</div>
 	</div>
 	<script>
-		// Get the modal
-		var popupMessage = document.getElementById("popupMessage");
+		// Get the modals
+		var popupMessage1 = document.getElementById("popupMessage1");
+		var popupMessage2 = document.getElementById("popupMessage2");
 
-		// Get the buttons that open the modal
+		// Get the buttons that open the modals
+		var bookNowMap1 = document.getElementById("bookNowMap1");
 		var bookNowMap2 = document.getElementById("bookNowMap2");
-		var bookNowMap3 = document.getElementById("bookNowMap3");
 
-		// Get the <span> element that closes the modal
-		var closeBtn = document.getElementsByClassName("close")[0];
+		// Get all close buttons
+		var closeBtns = document.getElementsByClassName("close");
 
-		// When the user clicks the buttons, open the modal 
+		// When the user clicks the buttons, open the corresponding modal 
+		bookNowMap1.onclick = function () {
+			popupMessage1.style.display = "block";
+		}
+
 		bookNowMap2.onclick = function () {
-			popupMessage.style.display = "block";
+			popupMessage2.style.display = "block";
 		}
 
-		bookNowMap3.onclick = function () {
-			popupMessage.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		closeBtn.onclick = function () {
-			popupMessage.style.display = "none";
+		// Attach the close event to all close buttons
+		for (var i = 0; i < closeBtns.length; i++) {
+			closeBtns[i].onclick = function () {
+				this.parentElement.parentElement.style.display = "none";
+			}
 		}
 
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function (event) {
-			if (event.target == popupMessage) {
-				popupMessage.style.display = "none";
+			if (event.target == popupMessage1) {
+				popupMessage1.style.display = "none";
+			} else if (event.target == popupMessage2) {
+				popupMessage2.style.display = "none";
 			}
 		}
 	</script>
